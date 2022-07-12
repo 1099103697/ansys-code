@@ -1,4 +1,4 @@
-# State file created:  2022/07/11 15:53:37
+# State file created:  2022/07/12 12:11:03
 # CFX-22.1
 
 COMMENT:User Data
@@ -15,10 +15,10 @@ DATA READER:
   Clear All Objects = False
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case FFF
-  Current Case Name = C:\Users\Administrator\AppData\Local\Temp\\
-WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
-  Current Results File = C:\Users\Administrator\AppData\Local\Temp\\
-WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
+  Current Case Name = E:\ansys\ansys-code\test_3\liuti_files\dp0\FFF\Fluent\\
+SYS.1-5-00591.dat.h5
+  Current Results File = E:\ansys\ansys-code\test_3\liuti_files\dp0\FFF\Fluent\\
+SYS.1-5-00591.dat.h5
   Current Timestep = -1
   Current Timevalue = 0
   Edit Case Names = false
@@ -45,10 +45,10 @@ WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
   Timevalue Match Criterion = Same Value
   CASE:Case FFF
     Construct Variables From Fourier Coefficients = True
-    Current Case Name = C:\Users\Administrator\AppData\Local\Temp\\
-WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
-    Current Results File = C:\Users\Administrator\AppData\Local\Temp\\
-WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
+    Current Case Name = E:\ansys\ansys-code\test_3\liuti_files\dp0\FFF\Fluent\\
+SYS.1-5-00591.dat.h5
+    Current Results File = E:\ansys\ansys-code\test_3\liuti_files\dp0\FFF\\
+Fluent\SYS.1-5-00591.dat.h5
     Current Timestep = -1
     Current Timevalue = 0
     File Angle Units = rad
@@ -94,7 +94,7 @@ WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
       Tile Texture = Off
       Transform Texture = Off
       Transparency = 0.0
-      Visibility = false
+      Visibility = Off
     END
     BOUNDARY:wall air
       Apply Instancing Transform = On
@@ -128,7 +128,7 @@ WB_Administrator_13916_2\wbnew_files\dp0\FFF\Fluent\SYS-3-00754.dat.h5
       Tile Texture = Off
       Transform Texture = Off
       Transparency = 0.0
-      Visibility = false
+      Visibility = On
     END
     DOMAIN:air
       Angle Definition Method = Instances in 360
@@ -294,11 +294,11 @@ END
 LIBRARY:
   CEL:
     EXPRESSIONS:
-      Accumulated Time Step = 754
+      Accumulated Time Step = 591
       Current Phase Position = 0
-      Current Time Step = 754
+      Current Time Step = 591
       Phase = Current Phase Position
-      Sequence Step = 754
+      Sequence Step = 591
       Time = 0 [s]
       atstep = Accumulated Time Step
       ctstep = Current Time Step
@@ -361,7 +361,7 @@ PLANE:XY
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -434,7 +434,7 @@ PLANE:XZ
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Visibility = On
+  Visibility = Off
   X = 0.0 [m]
   Y = 0.0 [m]
   Z = 0.0 [m]
@@ -1398,7 +1398,7 @@ VECTOR:Vector 1
   Surface Drawing = Smooth Shading
   Surface Sampling = Off
   Symbol = Line Arrow
-  Symbol Size = 0.2
+  Symbol Size = 0.5
   Transparency = 0.0
   Variable = Velocity
   Variable Boundary Values = Conservative
@@ -1433,18 +1433,19 @@ VIEW:View 1
   Highlight Type = Surface Mesh
   Is A Figure = false
   Light Angle = 50, 110
-  Object Visibility List = /DEFAULT LEGEND:Default Legend View 1,/PLANE:XY,/\
-PLANE:XZ,/STREAMLINE:Streamline 1,/VECTOR:Vector 1,/WIREFRAME:Wireframe
+  Object Visibility List = /DATA READER/CASE:Case FFF/BOUNDARY:wall air,/\
+DEFAULT LEGEND:Default Legend View 1,/STREAMLINE:Streamline 1,/VECTOR:Vector 1,/\
+WIREFRAME:Wireframe
   Projection = Orthographic
   Ruler Visibility = true
   Standard View = Isometric Y
   CAMERA:
     Option = Pivot Point and Quaternion
     Pan = 0,0
-    Pivot Point = 0.0342986,1.27405e-06,-5.22658e-05
+    Pivot Point = -0.0317322,-2.2918e-05,1.21035e-05
     Rotation = -90, 0, 0
-    Rotation Quaternion = -0.274863,-0.843346,-0.310021,0.342199
-    Scale = 24.1741
+    Rotation Quaternion = 0.212693,0.812204,-0.531559,0.111806
+    Scale = 17.4955
     Send To Viewer = True
   END
 END
