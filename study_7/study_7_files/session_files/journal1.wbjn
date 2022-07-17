@@ -1,0 +1,17 @@
+# encoding: utf-8
+# 2022 R1
+SetScriptVersion(Version="22.1.217")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="E:/ANSYS学习素材/第八课/几何模型/带孔矩形板.x_t")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+system1.DisplayText = "弱弹簧"
+system1.DisplayText = "弱弹簧抵消系统误差"
+Save(Overwrite=True)
