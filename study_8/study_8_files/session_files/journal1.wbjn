@@ -1,0 +1,31 @@
+# encoding: utf-8
+# 2022 R1
+SetScriptVersion(Version="22.1.217")
+template1 = GetTemplate(
+    TemplateName="Explicit Dynamics",
+    Solver="AUTODYN")
+system1 = template1.CreateSystem()
+library1 = EngData.OpenLibrary(
+    Name="Explicit Materials",
+    Source="Explicit_Materials.xml")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="STEEL 4340",
+    Source="Explicit_Materials.xml")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("子弹打板.x_t"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+geometry1.Edit()
+geometry1.Exit()
+modelComponent1.Refresh()
+model1.Edit()
+matl2 = engineeringData1.ImportMaterial(
+    Name="CART BRASS",
+    Source="Explicit_Materials.xml")
+Update()
+model1.Exit()
+Save(Overwrite=True)

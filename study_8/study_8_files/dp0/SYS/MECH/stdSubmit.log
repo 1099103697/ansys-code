@@ -1,0 +1,5 @@
+Running Solver : D:\Program Files\ANSYS Inc\v221\aisol\bin\winx64\Ansys.Solvers.Explicit.Launcher.exe -input ".\admodel_0.ad" -exd -beta -double -machines localhost:2
+Checking remote machine response
+admodel
+D:\Program Files\ANSYS Inc\v221\commonfiles\MPI\Intel\2018.3.210\winx64\bin\mpiexec.exe
+-configfile "C:\Users\Administrator\AppData\Roaming\ANSYS\v221\AUTODYN\applfile"
