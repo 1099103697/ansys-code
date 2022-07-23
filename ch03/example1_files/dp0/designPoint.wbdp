@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Storage>
+  <Project Version="5.1" />
+  <Addins>
+    <Addin Name="Ansys.DesignModeler.Core.Addin" Version="3.0.1.0" />
+    <addin-list valType="String">[Ansys.DesignModeler.Core.Addin]</addin-list>
+  </Addins>
+  <Containers>
+    <Container Name="Geometry" Version="1.0">
+      <Object Name="/Geometry/Geometry:GeometryDataObject" Version="1.0">
+        <class-type valType="String">Geometry</class-type>
+        <object-name valType="String">GeometryDataObject</object-name>
+        <member-data valType="String">{"DisplayText": "GeometryDataObject", "_geometryFileRelativePath": r"dp0\Geom\DM\Geom.agdb", "_geometryTeamcenterConnection": None, "_geometryPlugInName": "", "GeomFileReference": $$1595dfcd-2616-465e-ac6e-2990fd99014c, "GeometryImportSolidBodies": True, "GeometryImportSurfaceBodies": True, "GeometryImportLineBodies": False, "GeometryImportParameters": True, "GeometryImportParametersFilter": "DS", "GeometryImportCadAttributes": False, "GeometryImportCadAttributesFilter": "SDFEA;DDM", "GeometryImportNamedSelections": False, "GeometryImportNamedSelectionsFilter": "NS", "GeometryImportMaterialProperties": False, "GeometryImportAnalysisType": "AnalysisType_3D", "GeometryImportCadAssociativity": True, "GeometryImportCoordinateSystems": False, "GeometryImportWorkPoints": False, "GeometryImportSavePartFile": False, "GeometryImportImportUsingInstances": True, "GeometryImportSmartUpdate": False, "GeometryImportProcessEnclosures": True, "GeometryImportDecomposeDisjointFaces": True, "GeometryImportMixedResolutionOption": "MixedImport_None", "GeometryImportSTLSDTAlgorithm": "STLSDTAlgorithm_Curvatures", "GeometryImportSTLCurvatureAlgorithmSharpEdgesAngle": 30, "GeometryImportSTLCurvatureAlgorithmPlanesToleranceAngle": 0.5, "GeometryImportSTLCurvatureAlgorithmIgnoreSecondaryNodes": True, "GeometryImportSTLAngleAlgorithmCutAngle": 15, "GeometryImportSTLAngleAlgorithmToleranceAngle": 15, "Guid": "9d26ef65-7819-45ac-8526-1def0e9d043d", "ObjectState": 0, "UpstreamConnections": {}, "ImportedFeatures": {}, "IsSpaceClaimGeometry": False, "AreParametersOutOfDate": False, "RegisteredExternalFilesInfo": {"$$1595dfcd-2616-465e-ac6e-2990fd99014c": {"FilePathInDM": r"E:\Private\图书\Fluent\光盘\ch3\3_files\dp0\Geom\DM\Geom.agdb", "FilePathAfterRepair": r"E:\Private\图书\Fluent\光盘\ch3\3_files\dp0\Geom\DM\Geom.agdb", "IsFileRepaired": False, "CadSourceType": "DesignModeler"}}, "AreParametersMigratedFromLegacyDatabaseImport": False}</member-data>
+      </Object>
+      <container-type valType="String">Ansys.DesignModeler.Core.Addin:Geometry</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">3920</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 3932, "Input": 3917, "Output": 3917}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{}</last-update-regen-times>
+      <unique-system-dir valType="String">Geom</unique-system-dir>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
+    </Container>
+    <container-map valType="String">{"Geometry": Ansys.DesignModeler.Core.Addin:Geometry}</container-map>
+    <static-container-ids valType="String">{}</static-container-ids>
+  </Containers>
+</Storage>
