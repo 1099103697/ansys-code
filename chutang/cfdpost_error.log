@@ -1,0 +1,4 @@
+ 2022/07/31 15:34:43 
+CCLAPI::validateCCLData - CCL validation failed with message:
+Error: The essential parameter 'Location List' is missing from /VECTOR:Vector 1
+

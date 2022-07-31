@@ -1,0 +1,326 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: 2d, dbns imp, dynamesh, rke, transient (2d, density-based implicit, dynamic mesh, realizable k-epsilon, transient)
+Release: 22.1.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                        Settings                                
+   ------------------------------------------------------------------
+   Space                        2D                                      
+   Time                         Unsteady, 1st-Order Implicit            
+   Viscous                      Realizable k-epsilon turbulence model   
+   Wall Treatment               Standard Wall Functions                 
+   Heat Transfer                Enabled                                 
+   Solidification and Melting   Disabled                                
+   Radiation                    None                                    
+   Species                      Disabled                                
+   Coupled Dispersed Phase      Disabled                                
+   NOx Pollutants               Disabled                                
+   SOx Pollutants               Disabled                                
+   Soot                         Disabled                                
+   Mercury Pollutants           Disabled                                
+   Structure                    Disabled                                
+   Acoustics                    Disabled                                
+   Eulerian Wall Film           Disabled                                
+   Potential/Li-ion Battery     Disabled                                
+   Multiphase                   Disabled                                
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: air (fluid)
+
+      Property                        Units      Method      Value(s)     
+      -----------------------------------------------------------------
+      Density                         kg/m^3     ideal-gas   #f           
+      Cp (Specific Heat)              J/(kg K)   constant    1006.43      
+      Thermal Conductivity            W/(m K)    constant    0.0242       
+      Viscosity                       kg/(m s)   constant    1.7894e-05   
+      Molecular Weight                kg/kmol    constant    28.966       
+      Thermal Expansion Coefficient   K^-1       constant    0            
+      Speed of Sound                  m/s        none        #f           
+
+   Material: aluminum (solid)
+
+      Property               Units      Method     Value(s)   
+      -----------------------------------------------------
+      Density                kg/m^3     constant   2719       
+      Cp (Specific Heat)     J/(kg K)   constant   871        
+      Thermal Conductivity   W/(m K)    constant   202.4      
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name             id   type    
+      ---------------------------
+      initial1-fluid   5    fluid   
+      initial2-fluid   6    fluid   
+      bullet-fluid     7    fluid   
+      outer-fluid      8    fluid   
+
+   Setup Conditions
+
+      initial1-fluid
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+      initial2-fluid
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+      bullet-fluid
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+      outer-fluid
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name                               id   type              
+      -------------------------------------------------------
+      interface2-non-overlapping         29   wall              
+      interface-out-non-overlapping      30   wall              
+      interface1-non-overlapping         27   wall              
+      interface-bullet-non-overlapping   28   wall              
+      top                                11   wall              
+      outlet2                            12   pressure-outlet   
+      outlet1                            13   pressure-outlet   
+      bullet-initial1-fluid              14   wall              
+      bullet-bullet-fluid                15   wall              
+      interface-bullet                   16   interface         
+      interface-out                      17   interface         
+      interface1                         18   interface         
+      interface2                         19   interface         
+      symmetry-initial1-fluid            20   symmetry          
+      symmetry-bullet-fluid              21   symmetry          
+      wall-initial2-fluid                22   wall              
+      wall-outer-fluid                   23   wall              
+
+   Setup Conditions
+
+      interface2-non-overlapping
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      interface-out-non-overlapping
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      interface1-non-overlapping
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      interface-bullet-non-overlapping
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      top
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      outlet2
+
+         Condition   Value   
+         -----------------
+
+      outlet1
+
+         Condition   Value   
+         -----------------
+
+      bullet-initial1-fluid
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      bullet-bullet-fluid
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      interface-bullet
+
+         Condition   Value                              
+         --------------------------------------------
+                     interface-bullet-non-overlapping   
+
+      interface-out
+
+         Condition   Value                           
+         -----------------------------------------
+                     interface-out-non-overlapping   
+
+      interface1
+
+         Condition   Value                        
+         --------------------------------------
+                     interface1-non-overlapping   
+
+      interface2
+
+         Condition   Value                        
+         --------------------------------------
+                     interface2-non-overlapping   
+
+      symmetry-initial1-fluid
+
+         Condition   Value   
+         -----------------
+
+      symmetry-bullet-fluid
+
+         Condition   Value   
+         -----------------
+
+      wall-initial2-fluid
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      wall-outer-fluid
+
+         Condition                  Value             
+         ------------------------------------------
+         Thermal BC Type            Heat Flux         
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation     Solved   
+      -------------------
+      Flow         yes      
+      Turbulence   yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Unsteady Calculation Parameters
+
+                                         
+      --------------------------------
+      Number of Time Steps       2000    
+      Time Step Size [s]         1e-06   
+      Max Iterations/Time Step   20      
+
+   Under-Relaxation Factors
+
+      Variable                     Relaxation Factor   
+      ----------------------------------------------
+      Turbulent Kinetic Energy     0.8                 
+      Turbulent Dissipation Rate   0.8                 
+      Turbulent Viscosity          1                   
+      Solid                        1                   
+
+   Linear Solver
+
+      Variable                     Solver Type   Termination Criterion   Residual Reduction Tolerance   
+      -----------------------------------------------------------------------------------------------
+      Flow                         F-Cycle       0.1                                                    
+      Turbulent Kinetic Energy     Flexible      0.1                     0.7                            
+      Turbulent Dissipation Rate   Flexible      0.1                     0.7                            
+
+   Discretization Scheme
+
+      Variable                     Scheme                
+      ------------------------------------------------
+      Flow                         Second Order Upwind   
+      Turbulent Kinetic Energy     First Order Upwind    
+      Turbulent Dissipation Rate   First Order Upwind    
+
+   Time Marching
+
+      Parameter                 Value      
+      ----------------------------------
+      Solver                    Implicit   
+      Physical Time Step Size   1e-06      
+      Courant Number            5          
+
+   Solution Limits
+
+      Quantity                         Limit    
+      ---------------------------------------
+      Minimum Absolute Pressure        1        
+      Maximum Absolute Pressure        5e+10    
+      Minimum Temperature              1        
+      Maximum Temperature              5000     
+      Minimum Turb. Kinetic Energy     1e-14    
+      Minimum Turb. Dissipation Rate   1e-20    
+      Maximum Turb. Viscosity Ratio    100000   
+
+</SolverSettings>
+
+</FluentXMLReport>
