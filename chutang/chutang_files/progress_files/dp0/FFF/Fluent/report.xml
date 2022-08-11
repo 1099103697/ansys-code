@@ -16,7 +16,7 @@ Models
    Space                        2D                                      
    Time                         Unsteady, 1st-Order Implicit            
    Viscous                      Realizable k-epsilon turbulence model   
-   Wall Treatment               Standard Wall Functions                 
+   Wall Treatment               Scalable Wall Function                  
    Heat Transfer                Enabled                                 
    Solidification and Melting   Disabled                                
    Radiation                    None                                    
@@ -175,13 +175,15 @@ Boundary Conditions
 
       outlet2
 
-         Condition   Value   
-         -----------------
+         Condition             Value    
+         ----------------------------
+         Gauge Pressure [Pa]   101325   
 
       outlet1
 
-         Condition   Value   
-         -----------------
+         Condition             Value    
+         ----------------------------
+         Gauge Pressure [Pa]   101325   
 
       bullet-initial1-fluid
 
@@ -274,7 +276,7 @@ Solver Settings
       --------------------------------
       Number of Time Steps       2000    
       Time Step Size [s]         1e-06   
-      Max Iterations/Time Step   20      
+      Max Iterations/Time Step   50      
 
    Under-Relaxation Factors
 
